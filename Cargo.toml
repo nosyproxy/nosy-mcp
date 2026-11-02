@@ -1,0 +1,47 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+rust-version = "1.90"
+
+[workspace.dependencies]
+# Shared types and codecs from the core; the exact commit is pinned in Cargo.lock
+# (bump with `cargo update -p nosy-model -p nosy-codec -p nosy-server`).
+# To develop against a local checkout in ../nosy, run `make link` (`make unlink` to undo).
+nosy-model = { git = "https://github.com/nosyproxy/nosy", branch = "main" }
+nosy-codec = { git = "https://github.com/nosyproxy/nosy", branch = "main" }
+nosy-server = { git = "https://github.com/nosyproxy/nosy", branch = "main" }
+
+tokio = { version = "1.54", features = ["rt-multi-thread", "macros", "io-std", "io-util", "time", "sync", "signal"] }
+tokio-util = { version = "0.7", features = ["rt"] }
+rmcp = { version = "3.8", default-features = false, features = ["server", "macros", "transport-io"] }
+schemars = "1"
+reqwest = { version = "0.13", default-features = false, features = ["rustls", "http2"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+clap = { version = "4.6", features = ["derive", "env"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+anyhow = "1"
+tempfile = "3"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+rust_2018_idioms = { level = "warn", priority = -1 }
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.dev.package."*"]
+opt-level = 2
