@@ -2,7 +2,6 @@ name: CI
 
 on:
   pull_request:
-  # Manual run also tests against the core's current main (see the core-main job).
   workflow_dispatch:
 
 concurrency:
@@ -42,7 +41,6 @@ jobs:
       - run: cargo clippy --workspace --all-targets --locked -- -D warnings
       - run: cargo test --workspace --locked
 
-  # The core is a git dependency pinned in Cargo.lock; this checks the core's latest main.
   core-main:
     name: test against core main (${{ matrix.os }})
     if: github.event_name == 'workflow_dispatch'

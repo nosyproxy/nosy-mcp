@@ -1,6 +1,5 @@
 name: Release
 
-# Push a tag like v0.2.0 to publish nosy-mcp binaries to a GitHub Release.
 on:
   push:
     tags: ['v*']
