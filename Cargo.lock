@@ -647,7 +647,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
  "libc",
- "windows-sys 0.61.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -1412,8 +1412,8 @@ dependencies = [
 
 [[package]]
 name = "nosy-ca"
-version = "0.1.0"
-source = "git+https://github.com/nosyproxy/nosy?branch=main#e7f4e5ffeebc028e69f281595b0a3126ad58d18e"
+version = "0.1.2"
+source = "git+https://github.com/nosyproxy/nosy?branch=main#ab410e66ba5f4a984415febb7ff0b1613a09e21a"
 dependencies = [
  "quick_cache",
  "rcgen",
@@ -1425,8 +1425,8 @@ dependencies = [
 
 [[package]]
 name = "nosy-codec"
-version = "0.1.0"
-source = "git+https://github.com/nosyproxy/nosy?branch=main#e7f4e5ffeebc028e69f281595b0a3126ad58d18e"
+version = "0.1.2"
+source = "git+https://github.com/nosyproxy/nosy?branch=main#ab410e66ba5f4a984415febb7ff0b1613a09e21a"
 dependencies = [
  "base64 0.23.1",
  "brotli",
@@ -1463,8 +1463,8 @@ dependencies = [
 
 [[package]]
 name = "nosy-model"
-version = "0.1.0"
-source = "git+https://github.com/nosyproxy/nosy?branch=main#e7f4e5ffeebc028e69f281595b0a3126ad58d18e"
+version = "0.1.2"
+source = "git+https://github.com/nosyproxy/nosy?branch=main#ab410e66ba5f4a984415febb7ff0b1613a09e21a"
 dependencies = [
  "bytes",
  "http",
@@ -1474,8 +1474,8 @@ dependencies = [
 
 [[package]]
 name = "nosy-proxy"
-version = "0.1.0"
-source = "git+https://github.com/nosyproxy/nosy?branch=main#e7f4e5ffeebc028e69f281595b0a3126ad58d18e"
+version = "0.1.2"
+source = "git+https://github.com/nosyproxy/nosy?branch=main#ab410e66ba5f4a984415febb7ff0b1613a09e21a"
 dependencies = [
  "bytes",
  "http",
@@ -1497,8 +1497,8 @@ dependencies = [
 
 [[package]]
 name = "nosy-repeater"
-version = "0.1.0"
-source = "git+https://github.com/nosyproxy/nosy?branch=main#e7f4e5ffeebc028e69f281595b0a3126ad58d18e"
+version = "0.1.2"
+source = "git+https://github.com/nosyproxy/nosy?branch=main#ab410e66ba5f4a984415febb7ff0b1613a09e21a"
 dependencies = [
  "bytes",
  "http",
@@ -1517,8 +1517,8 @@ dependencies = [
 
 [[package]]
 name = "nosy-server"
-version = "0.1.0"
-source = "git+https://github.com/nosyproxy/nosy?branch=main#e7f4e5ffeebc028e69f281595b0a3126ad58d18e"
+version = "0.1.2"
+source = "git+https://github.com/nosyproxy/nosy?branch=main#ab410e66ba5f4a984415febb7ff0b1613a09e21a"
 dependencies = [
  "anyhow",
  "axum",
@@ -1547,8 +1547,8 @@ dependencies = [
 
 [[package]]
 name = "nosy-store"
-version = "0.1.0"
-source = "git+https://github.com/nosyproxy/nosy?branch=main#e7f4e5ffeebc028e69f281595b0a3126ad58d18e"
+version = "0.1.2"
+source = "git+https://github.com/nosyproxy/nosy?branch=main#ab410e66ba5f4a984415febb7ff0b1613a09e21a"
 dependencies = [
  "bytes",
  "crossbeam-channel",
@@ -1792,7 +1792,7 @@ dependencies = [
  "once_cell",
  "socket2",
  "tracing",
- "windows-sys 0.61.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -1996,9 +1996,9 @@ dependencies = [
 
 [[package]]
 name = "rmcp"
-version = "3.8.0"
+version = "3.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f8be15815186873ea063bf005011d16c356804973489e40c39116ae3a2878d1f"
+checksum = "d24a7e92f4bcaa36b97fa93c4fa7ca8f3e669eced949345b3462dba333c7f909"
 dependencies = [
  "chrono",
  "futures",
@@ -2010,6 +2010,7 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
+ "sha2",
  "thiserror",
  "tokio",
  "tokio-util",
@@ -2019,9 +2020,9 @@ dependencies = [
 
 [[package]]
 name = "rmcp-macros"
-version = "3.8.0"
+version = "3.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8b0748e054a5f5598b3213cf72099ae6b2745ba4d996c59ccf455150a7dbb839"
+checksum = "b3140f24a766f80f9ec1607bde85680959a69b83d46fa9ce87dadab7e67ab029"
 dependencies = [
  "darling",
  "proc-macro2",
@@ -2124,7 +2125,7 @@ dependencies = [
  "errno",
  "libc",
  "linux-raw-sys",
- "windows-sys 0.61.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -2182,7 +2183,7 @@ dependencies = [
  "security-framework",
  "security-framework-sys",
  "webpki-root-certs",
- "windows-sys 0.61.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -2570,10 +2571,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "32497e9a4c7b38532efcdebeef879707aa9f794296a4f0244f6f69e9bc8574bd"
 dependencies = [
  "fastrand",
- "getrandom 0.4.3",
+ "getrandom 0.3.4",
  "once_cell",
  "rustix",
- "windows-sys 0.61.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -3101,7 +3102,7 @@ version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
 dependencies = [
- "windows-sys 0.61.2",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
